@@ -12,9 +12,12 @@ out/
 # Environment variables
 .env
 .env.*
+.env.local
+.env.production
 packages/*/.env
 packages/*/.env.*
-.env.production
+apps/*/.env
+apps/*/.env.*
 
 # Logs
 npm-debug.log*
