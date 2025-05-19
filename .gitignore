@@ -10,7 +10,10 @@ build/
 out/
 
 # Environment variables
-.env*.local
+.env
+.env.*
+packages/*/.env
+packages/*/.env.*
 .env.production
 
 # Logs
