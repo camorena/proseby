@@ -1,0 +1,56 @@
+{
+  "name": "proseby-monorepo",
+  "private": true,
+  "packageManager": "pnpm@8.15.1",
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.15.1"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev --parallel",
+    "dev:web": "turbo run dev --filter=web",
+    "lint": "turbo run lint",
+    "lint:fix": "turbo run lint -- --fix",
+    "type-check": "turbo run type-check",
+    "test": "turbo run test",
+    "test:watch": "turbo run test -- --watch",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
+    "db:generate": "turbo run db:generate",
+    "db:migrate": "turbo run db:migrate",
+    "db:studio": "turbo run db:studio",
+    "db:seed": "turbo run db:seed",
+    "setup": "node scripts/setup.js",
+    "prepare": "husky install"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.27.1",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.2.0",
+    "prettier": "^3.5.3",
+    "turbo": "^1.13.4",
+    "typescript": "^5.8.2"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.{json,md,yml,yaml}": [
+      "prettier --write"
+    ]
+  },
+  "dependencies": {
+    "@prisma/client": "^6.8.2",
+    "@supabase/supabase-js": "^2.49.4",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "dotenv": "^16.5.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "openai": "^4.100.0",
+    "prisma": "^6.8.2"
+  }
+}
