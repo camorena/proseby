@@ -44,6 +44,7 @@
   "dependencies": {
     "@prisma/client": "^6.8.2",
     "@supabase/supabase-js": "^2.49.4",
+    "@types/node": "^22.15.19",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "@typescript-eslint/parser": "^8.32.1",
     "dotenv": "^16.5.0",
@@ -51,6 +52,7 @@
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.4.0",
     "openai": "^4.100.0",
-    "prisma": "^6.8.2"
+    "prisma": "^6.8.2",
+    "tsx": "^4.0.0"
   }
 }
